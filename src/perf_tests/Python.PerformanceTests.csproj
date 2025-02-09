@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <Target Name="GetRuntimeLibBuildOutput" BeforeTargets="Build">
-    <MSBuild Projects="..\runtime\Python.Runtime.csproj" Properties="OutputPath=bin\for_perf\;Configuration=Release;TargetFramework=netstandard2.0" Targets="Build">
+    <MSBuild Projects="..\runtime\Python.Runtime.csproj" Properties="OutputPath=bin\for_perf\;Configuration=Release;TargetFramework=net9.0" Targets="Build">
       <Output TaskParameter="TargetOutputs" ItemName="NewPythonRuntime" />
     </MSBuild>
   </Target>

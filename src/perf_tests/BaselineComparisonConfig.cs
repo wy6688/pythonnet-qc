@@ -6,7 +6,7 @@ using System.Reflection;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Jobs;
 
-using Perfolizer.Horology;
+// using Perfolizer.Horology;
 
 namespace Python.PerformanceTests
 {
@@ -24,7 +24,7 @@ namespace Python.PerformanceTests
                 .WithLaunchCount(1)
                 .WithWarmupCount(3)
                 .WithMaxIterationCount(100)
-                .WithIterationTime(TimeInterval.FromMilliseconds(100));
+                .WithIterationTime(BenchmarkDotNet.Horology.TimeInterval.FromMilliseconds(100));
             this.Add(baseJob
                 .WithId("baseline")
                 .WithEnvironmentVariable(EnvironmentVariableName,
