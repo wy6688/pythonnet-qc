@@ -6,7 +6,6 @@ using System.Reflection;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Jobs;
 
-// using Perfolizer.Horology;
 
 namespace Python.PerformanceTests
 {
